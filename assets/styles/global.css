@@ -96,14 +96,14 @@ h4 {
 .header-container::before {
   content: '';
   position: absolute;
-  left: 50%; /* Centers the image */
+  left: 50%;
   transform: translateX(-50%);
-  width: 100vw; /* Ensures the image spans the full viewport width */
+  width: 100vw; 
   height: 100%;
   background-image: url('assets/TechniHeader.png');
-  background-size: contain; /* Ensures the full image is always shown */
+  background-size: contain;
   background-position: center;
-  background-repeat: no-repeat; /* Prevents repeating if the image is smaller than the container */
+  background-repeat: no-repeat; 
   z-index: 0;
 }
 
