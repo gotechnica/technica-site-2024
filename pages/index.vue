@@ -39,19 +39,21 @@
       <AdditionalInfo />
     </div>
 
+    <!-- Sponsors Section -->
     <div class="container">
       <Sponsors />
     </div>
 
-    <div class="container">
+    <!-- Meet the Team -->
+    <div class="container meetTheTeam">
+      <TeamsCarousel2 />
+    </div>
+
+    <div class="container faq">
       <Header v-if="width <= 768" class=faq>FAQ</Header>
       <Header v-else class=faq>Frequently Asked Questions</Header>
       <FAQ faqId="main" :qaList="qaList" class="main-section" />
     </div>
-
-    <!-- <div class="container">
-      <TeamsCarousel/>
-    </div> -->
   </div>
   <StickyButton></StickyButton>
 </template>
@@ -181,5 +183,14 @@ useHead({
   .hybrid {
     margin-top: -60rem;
   }
+
+  .meetTheTeam {
+    visibility: hidden;
+  }
+
+  .faq {
+    margin-top: -60rem;
+  }
+
 }
 </style>
