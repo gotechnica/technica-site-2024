@@ -50,11 +50,7 @@
               <td>{{ formatAMPM(item.time) }}</td>
               <td>{{ item.prize_category }}</td>
               <td>{{ item.sponsor_name }}</td>
-<<<<<<< HEAD
               <td v-if="item.location.toString().startsWith('http')">
-=======
-              <td v-if="item.location.startsWith('http')">
->>>>>>> dayOf
                 <a :href="item.location" target="_blank">{{ item.location }}</a>
               </td>
               <td v-else>
@@ -100,17 +96,10 @@
           // Filter by the selected toggle
           const virtualFilter =
             this.selectedToggle === 'virtual' &&
-<<<<<<< HEAD
             item.location.toString().startsWith('https');
           const inPersonFilter =
             this.selectedToggle === 'in-person' &&
             !item.location.toString().startsWith('https');
-=======
-            item.location.startsWith('https');
-          const inPersonFilter =
-            this.selectedToggle === 'in-person' &&
-            !item.location.startsWith('https');
->>>>>>> dayOf
   
           return nameFilter && (virtualFilter || inPersonFilter || this.selectedToggle === 'all');
         });
@@ -180,28 +169,16 @@
     }
   
     td {
-<<<<<<< HEAD
       background-color: $LIGHTGREEN;
       border-top: none !important;
       border-bottom: 1px solid $DARKGREEN;
       color: black !important;
-=======
-      background-color: transparent;
-      border-top: none !important;
-      border-bottom: 1px solid $DARKYELLOW;
-      color: $LIGHTYELLOW;
->>>>>>> dayOf
     }
   
     th {
       border-top: none !important;
-<<<<<<< HEAD
       border-bottom: solid 1px $DARKGREEN;
       background-color: $MIDGREEN !important;
-=======
-      border-bottom: solid 1px $DARKYELLOW;
-      background-color: $LIGHTYELLOW !important;
->>>>>>> dayOf
       cursor: pointer;
       font-weight: 600;
       user-select: none;
@@ -215,13 +192,10 @@
       background-color: #f5f5f5;
     }
   }
-<<<<<<< HEAD
 
   a {
     color: $DARKYELLOW;
   }
-=======
->>>>>>> dayOf
   
   .search-container {
     margin: 20px 0;
