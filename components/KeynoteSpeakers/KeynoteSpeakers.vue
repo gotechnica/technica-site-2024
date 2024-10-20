@@ -3,6 +3,7 @@
     <div class="speaker-container">
       <div class="speaker-card first">
         <div class="image-wrapper1">
+<<<<<<< HEAD
         </div>
         <h1 class="speaker-name">Eriol Fox</h1>
         <p class="speaker-info">Senior Human-Rights centered Designer at Superbloom</p>
@@ -19,10 +20,27 @@
 They are also part of the core teams at <a href="http://opensourcedesign.net/">Open Source Design</a>, <a href="https://hrcd.pubpub.org/">Human Rights Centred Design working group</a>, <a href="https://sustainoss.org/working-groups/design-and-ux/">Sustain UX & Design working group</a>, and help <a href="https://sosdesign.sustainoss.org/">hosts podcast</a> about open source and design.
 Eriol is a non-binary, queer person who uses they/them pronouns.
         </p>
+=======
+          <img class="speaker-one" src="/keynote-speakers/speaker1.png" />
+        </div>
+        <h1 class="speaker-name">Coming Soon!</h1>
+        <p class="speaker-pronouns">Pronouns</p>
+        <div class="dropdown">
+          <button @click="toggleDropdown(1)" class="dropdown-button">
+            <img class="button-image" src="/keynote-speakers/bio-button.png">
+          </button>
+          <div v-if="isOpen1" class="dropdown-menu">
+            <p>
+              Check back soon for more information!
+            </p>
+          </div>
+        </div>
+>>>>>>> dayOf
       </div>
 
       <div class="speaker-card second">
         <div class="image-wrapper2">
+<<<<<<< HEAD
         </div>
         <h1 class="speaker-name">Ayodele Odubela</h1>
         <p class="speaker-info">Founder, AI ALT Lab</p>
@@ -36,6 +54,22 @@ Eriol is a non-binary, queer person who uses they/them pronouns.
         <p v-if="isOpen2" class="description">
           Odubela is the Founder of the AI ALT Lab, envisioning alternate approaches to AI that prioritize the well-being of marginalized people. She was previously a data scientist working on auditing HR algorithms, developing ML fairness education at Microsoft, and deploying ML features for various startups. She received her Bachelor’s in Communications from the University of Pittsburgh and went on to receive a Master’s in Data Science from Regis University. In her spare time Ayodele enjoys playing drums and making candles.
         </p>
+=======
+          <img class="speaker-one" src="/keynote-speakers/speaker1.png" />
+        </div>
+        <h1 class="speaker-name">Coming Soon!</h1>
+        <p class="speaker-pronouns">Pronouns</p>
+        <div class="dropdown">
+          <button @click="toggleDropdown(2)" class="dropdown-button">
+              <img class="button-image" src="/keynote-speakers/bio-button.png">
+          </button>
+          <div v-if="isOpen2" class="dropdown-menu">
+            <p>
+              Check back soon for more information!
+            </p>
+          </div>
+        </div>
+>>>>>>> dayOf
       </div>
   </div>
 </template>
@@ -46,6 +80,7 @@ import {ref} from 'vue';
 
 const isOpen1 = ref(false);
 const isOpen2 = ref(false);
+<<<<<<< HEAD
 let degree1 = 0
 let degree2 = 0
 const toggleDropdown = (dropdownNumber: number) => {
@@ -55,6 +90,14 @@ const toggleDropdown = (dropdownNumber: number) => {
   } else if (dropdownNumber === 2) {
     isOpen2.value = !isOpen2.value;
     degree2 = (degree2 == 180 ? 0 : 180)
+=======
+
+const toggleDropdown = (dropdownNumber: number) => {
+  if (dropdownNumber === 1) {
+    isOpen1.value = !isOpen1.value;
+  } else if (dropdownNumber === 2) {
+    isOpen2.value = !isOpen2.value;
+>>>>>>> dayOf
   }
 };
 </script>
@@ -93,6 +136,19 @@ const toggleDropdown = (dropdownNumber: number) => {
   background-color: transparent;
 
 }
+<<<<<<< HEAD
+=======
+.dropdown-menu {
+  display: none;
+  position: absolute; 
+  background-color: #66395e;
+  border: 2px #4c083d;
+}
+
+.dropdown-menu {
+  display: block; 
+}
+>>>>>>> dayOf
 
 .dropdown-button {
   background-color: transparent;
@@ -101,7 +157,11 @@ const toggleDropdown = (dropdownNumber: number) => {
   cursor: pointer; /* Ensure button is clickable */
 }
 
+<<<<<<< HEAD
 .description {
+=======
+.dropdown-menu p {
+>>>>>>> dayOf
   color: white; 
   text-align: center;
 }
@@ -119,7 +179,11 @@ const toggleDropdown = (dropdownNumber: number) => {
     flex-direction: column;    
     align-items: center; 
     width: 90%;
+<<<<<<< HEAD
     max-width: 500px;
+=======
+    max-width: 250px;
+>>>>>>> dayOf
     box-sizing: border-box;     
     
   }
@@ -141,6 +205,7 @@ const toggleDropdown = (dropdownNumber: number) => {
     -1.5px 1.5px 0 #00473E;   
 }
 
+<<<<<<< HEAD
   .speaker-info{
     color: white;
     text-align: center;
@@ -156,6 +221,10 @@ const toggleDropdown = (dropdownNumber: number) => {
 
   .btn-container {
     position: relative;
+=======
+  .speaker-pronouns{
+    color: white;
+>>>>>>> dayOf
   }
 
   @media screen and (max-width: 480px) {
