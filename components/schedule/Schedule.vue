@@ -137,7 +137,7 @@ const scheduleColumns = ref<any>({});
 const dataLoaded = ref(false);
 const selectedEvent = ref<Event>();
 const startDate = ref(new Date('2024-10-26T09:00:00-04:00'));
-const endDate = ref(new Date('2024-10-27T16:00:00-04:00'));
+const endDate = ref(new Date('2024-10-27T23:00:00-04:00'));
 const showEventModal = ref(false);
 const showFavorites = ref(false);
 const isFavorite = ref(false);
@@ -147,7 +147,7 @@ const selectedEventCategories = ref<EventCategory[]>([
   'main',
   'workshop',
   'mini',
-  'chat',
+  // 'chat',
   'food',
   'virtual',
 ]);
@@ -155,7 +155,7 @@ const eventCategories = [
   { value: 'main', label: 'Main Events' },
   { value: 'workshop', label: 'Workshops' },
   { value: 'mini', label: 'Mini-Events' },
-  { value: 'chat', label: 'Techni-Chats' },
+  // { value: 'chat', label: 'Techni-Chats' },
   { value: 'food', label: 'Food' },
   { value: 'virtual', label: 'Virtual' },
 ];
@@ -548,9 +548,9 @@ export default {
     background: $COLOR_MINI_EVENT;
   }
 
-  & .multiselect-tag[aria-label~='Techni-Chats'] {
+  /* & .multiselect-tag[aria-label~='Techni-Chats'] {
     background: $COLOR_TECHNI_CHAT;
-  }
+  } */
 
   & .multiselect-tag[aria-label~='Food'] {
     background: $COLOR_FOOD;
@@ -741,6 +741,7 @@ export default {
 }
 
 .schedule-content-item {
+  overflow: scroll;
   height: 4.5vh;
   border-radius: 8px;
   font-style: normal;
@@ -848,9 +849,9 @@ $event-length: 30;
   color: $COLOR_MINI_EVENT_BORDER;
 }
 
-.chat-text {
+/* .chat-text {
   color: $COLOR_TECHNI_CHAT_BORDER;
-}
+} */
 
 .food-text {
   color: $COLOR_FOOD_BORDER;
@@ -878,11 +879,11 @@ $event-length: 30;
   color: $COLOR_MINI_EVENT_BORDER;
 }
 
-.chat-event {
+/* .chat-event {
   background-color: $COLOR_TECHNI_CHAT;
   border-color: $COLOR_TECHNI_CHAT_BORDER;
   color: $COLOR_TECHNI_CHAT_BORDER;
-}
+} */
 
 .food-event {
   background-color: $COLOR_FOOD;
